@@ -103,26 +103,27 @@ Your site will be available at:
 https://YOUR_GITHUB_USERNAME.github.io/devops-training-website/
 ```
 
-This site is configured for the custom domain:
+Do not point the root domain `aimltutorial.in` to this GitHub Pages repo unless you want to replace the current homepage. Use a subdomain or subfolder instead.
+
+Recommended subdomain option:
 
 ```text
-https://aimltutorial.in/
+https://devops.aimltutorial.in/
 ```
 
-Point the apex domain to GitHub Pages with these `A` records:
+For a subdomain, point only the subdomain to GitHub Pages:
 
 ```text
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
+CNAME devops -> pradeep-hub18.github.io
 ```
 
-Point `www` to GitHub Pages with this `CNAME` record:
+Alternative subfolder option:
 
 ```text
-www -> pradeep-hub18.github.io
+https://aimltutorial.in/devops-training/
 ```
+
+For the subfolder option, upload these static site files into a `devops-training` folder on the existing hosting server.
 
 ## Optional Improvements
 
