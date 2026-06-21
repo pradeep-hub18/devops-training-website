@@ -329,6 +329,10 @@ h3 {
   gap: 16px;
 }
 
+.feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 .feature-card,
 .syllabus-grid article,
 .faq-grid details,
