@@ -1,0 +1,88 @@
+(function () {
+  const CONFIG = {
+    courseName: "DevOps Mastery Training",
+    whatsappNumber: "919999999999",
+    appsScriptUrl: "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+    whatsappMessage:
+      "Hi, I am interested in your DevOps training course. Please share details.",
+  };
+
+  const navToggle = document.querySelector(".nav-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      mobileNav.classList.toggle("is-open", !isOpen);
+    });
+
+    mobileNav.addEventListener("click", (event) => {
+      if (event.target.matches("a")) {
+        navToggle.setAttribute("aria-expanded", "false");
+        mobileNav.classList.remove("is-open");
+      }
+    });
+  }
+
+  function whatsappUrl() {
+    const message = encodeURIComponent(CONFIG.whatsappMessage);
+    return `https://wa.me/${CONFIG.whatsappNumber}?text=${message}`;
+  }
+
+  document.querySelectorAll(".js-whatsapp").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.open(whatsappUrl(), "_blank", "noopener,noreferrer");
+    });
+  });
+
+  const form = document.querySelector("[data-lead-form]");
+  const status = document.querySelector("[data-form-status]");
+
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!CONFIG.appsScriptUrl || CONFIG.appsScriptUrl.includes("PASTE_")) {
+      status.textContent =
+        "Lead form is ready. Add your Google Apps Script Web App URL in assets/app.js before going live.";
+      status.className = "form-status is-error";
+      return;
+    }
+
+    const submitButton = form.querySelector("[type='submit']");
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    payload.courseName = CONFIG.courseName;
+    payload.pageUrl = window.location.href;
+    payload.submittedAt = new Date().toISOString();
+
+    status.textContent = "Submitting your inquiry...";
+    status.className = "form-status";
+    submitButton.disabled = true;
+
+    try {
+      await fetch(CONFIG.appsScriptUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      form.reset();
+      window.location.href = "thank-you.html";
+    } catch (error) {
+      status.textContent =
+        "Something went wrong while submitting. Please try WhatsApp or submit again.";
+      status.className = "form-status is-error";
+      submitButton.disabled = false;
+    }
+  });
+})();

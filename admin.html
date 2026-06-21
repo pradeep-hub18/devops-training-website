@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lead Dashboard | DevOps Mastery Training</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23146b45'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='700' fill='white'%3EDM%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">DM</span>
+        <span>DevOps Mastery</span>
+      </a>
+      <a class="button button-outline" href="index.html">View site</a>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-panel">
+        <div>
+          <p class="eyebrow">Admin dashboard</p>
+          <h1>Student leads</h1>
+          <p>Enter your admin token to fetch leads from Google Sheets.</p>
+        </div>
+        <form class="admin-form" data-admin-form>
+          <label for="admin-token">Admin token</label>
+          <div class="token-row">
+            <input id="admin-token" name="token" type="password" autocomplete="off" required />
+            <button class="button button-primary" type="submit">Load leads</button>
+          </div>
+          <p class="form-status" data-admin-status role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="lead-summary" aria-label="Lead summary">
+        <article>
+          <span data-total-leads>0</span>
+          <p>Total leads</p>
+        </article>
+        <article>
+          <span data-latest-lead>-</span>
+          <p>Latest inquiry</p>
+        </article>
+      </section>
+
+      <section class="table-card" aria-label="Lead table">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Experience</th>
+                <th>Message</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody data-lead-table>
+              <tr>
+                <td colspan="7">No leads loaded yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/admin.js"></script>
+  </body>
+</html>
