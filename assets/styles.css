@@ -254,6 +254,23 @@ h3 {
   color: var(--brand);
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-note {
+  max-width: 520px;
+  margin-top: 16px;
+  font-size: 0.96rem !important;
+}
+
+.social-note strong {
+  color: var(--brand-dark);
+}
+
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -741,6 +758,7 @@ summary {
 
 .site-footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
   padding: 36px clamp(18px, 4vw, 54px);
@@ -751,6 +769,27 @@ summary {
 .site-footer p {
   margin: 6px 0 0;
   color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.footer-button {
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.footer-button:hover {
+  color: var(--accent);
 }
 
 .simple-page,
