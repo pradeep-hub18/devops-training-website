@@ -140,53 +140,189 @@
             <h2>Step-by-step modules for real project confidence.</h2>
           </div>
           <div class="syllabus-grid">
-            <article>
-              <h3>Linux and shell basics</h3>
-              <p>Commands, file permissions, users, services, packages, logs, networking tools, processes, and shell scripting fundamentals.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux logo" loading="lazy" />
+                <span class="module-step">Module 01</span>
+              </div>
+              <h3>Linux and shell foundation</h3>
+              <p>Build the operating-system confidence needed for servers, CI agents, containers, logs, networking, and production debugging.</p>
+              <ul>
+                <li>File system, permissions, users, groups, packages, services, systemd, cron, processes, and log locations.</li>
+                <li>Shell commands, pipes, redirects, grep/sed/awk basics, SSH, SCP, environment variables, and shell scripting.</li>
+                <li>Networking checks with curl, netstat/ss, dig, nc, ports, DNS, firewalls, and common server health commands.</li>
+              </ul>
+              <p class="module-lab">Lab: prepare a Linux VM as a DevOps workstation and write shell scripts for log checks and backups.</p>
             </article>
-            <article>
-              <h3>Git and GitHub workflow</h3>
-              <p>Repositories, branches, commits, pull requests, merge conflicts, tags, releases, and team collaboration workflows.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/git/F05032" alt="Git logo" loading="lazy" />
+                <span class="module-step">Module 02</span>
+              </div>
+              <h3>Git, GitHub, and team workflow</h3>
+              <p>Learn source-control practices used in real DevOps teams, from clean commits to pull-request based delivery.</p>
+              <ul>
+                <li>Repositories, branches, commits, tags, pull requests, merge conflicts, revert, reset, stash, and release flow.</li>
+                <li>Branching strategies, protected branches, code reviews, webhooks, repository secrets, and GitHub project hygiene.</li>
+                <li>How to explain a Git workflow clearly in interviews and avoid common production mistakes.</li>
+              </ul>
+              <p class="module-lab">Lab: create a GitHub repo, raise pull requests, resolve conflicts, and trigger a webhook-driven pipeline.</p>
             </article>
-            <article>
-              <h3>Jenkins CI/CD</h3>
-              <p>Freestyle jobs, pipelines, credentials, agents, webhooks, build stages, artifacts, test reports, and deployment automation.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins logo" loading="lazy" />
+                <span class="module-step">Module 03</span>
+              </div>
+              <h3>Jenkins CI/CD pipelines</h3>
+              <p>Design Jenkins pipelines that build, test, scan, package, and deploy applications with repeatable automation.</p>
+              <ul>
+                <li>Jenkins setup, agents, credentials, plugins, freestyle jobs, declarative pipeline syntax, and shared stages.</li>
+                <li>Build artifacts, test reports, quality gates, Docker build stages, deployment stages, rollback thinking, and notifications.</li>
+                <li>Pipeline troubleshooting for failed builds, missing credentials, agent issues, and broken webhooks.</li>
+              </ul>
+              <p class="module-lab">Lab: create a Jenkinsfile that builds an app, creates a Docker image, and deploys it to Kubernetes.</p>
             </article>
-            <article>
-              <h3>Docker containers</h3>
-              <p>Images, Dockerfiles, registries, volumes, networks, Compose, best practices, scanning, and debugging failed containers.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" loading="lazy" />
+                <span class="module-step">Module 04</span>
+              </div>
+              <h3>Docker containers and registries</h3>
+              <p>Containerize applications properly and understand how images move from developer machines to production clusters.</p>
+              <ul>
+                <li>Images, containers, Dockerfiles, layers, tags, volumes, networks, Compose, logs, exec, and resource limits.</li>
+                <li>Image optimization, multi-stage builds, private registries, ECR basics, security scanning, and secret handling.</li>
+                <li>Debugging failed containers, port mapping issues, missing environment variables, and broken image builds.</li>
+              </ul>
+              <p class="module-lab">Lab: dockerize a sample app, push it to a registry, and run it with environment-specific configuration.</p>
             </article>
-            <article>
-              <h3>Kubernetes core</h3>
-              <p>Pods, ReplicaSets, Deployments, Services, ConfigMaps, Secrets, namespaces, probes, resource limits, and rollout strategies.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes logo" loading="lazy" />
+                <span class="module-step">Module 05</span>
+              </div>
+              <h3>Kubernetes core concepts</h3>
+              <p>Understand the Kubernetes objects and operational patterns needed to deploy and support containerized applications.</p>
+              <ul>
+                <li>Pods, ReplicaSets, Deployments, Services, namespaces, labels, selectors, ConfigMaps, Secrets, and probes.</li>
+                <li>Resource requests and limits, rolling updates, rollbacks, node scheduling, kubectl commands, and YAML structure.</li>
+                <li>Debugging pod events, logs, describe output, service discovery, readiness failures, and pending workloads.</li>
+              </ul>
+              <p class="module-lab">Lab: deploy a multi-service application with config, secrets, health checks, service access, and rollout history.</p>
             </article>
-            <article>
-              <h3>Helm and release management</h3>
-              <p>Charts, values, templates, releases, upgrades, rollbacks, environment-specific configuration, and reusable deployment patterns.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/helm/0F1689" alt="Helm logo" loading="lazy" />
+                <span class="module-step">Module 06</span>
+              </div>
+              <h3>Helm packaging and releases</h3>
+              <p>Convert Kubernetes manifests into reusable Helm charts that support clean releases across dev, test, and production.</p>
+              <ul>
+                <li>Chart structure, values files, templates, helpers, release names, upgrades, rollbacks, and environment overrides.</li>
+                <li>Reusable chart patterns for deployments, services, ingress, config maps, secrets, probes, and image tags.</li>
+                <li>Common Helm mistakes such as bad indentation, missing values, failed upgrades, and drift from manual changes.</li>
+              </ul>
+              <p class="module-lab">Lab: package the Kubernetes app into a Helm chart and deploy separate dev and prod-style values.</p>
             </article>
-            <article>
-              <h3>ArgoCD GitOps</h3>
-              <p>GitOps principles, applications, sync policies, app health, drift detection, rollback, and multi-environment delivery.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/argo/EF7B4D" alt="Argo logo" loading="lazy" />
+                <span class="module-step">Module 07</span>
+              </div>
+              <h3>ArgoCD GitOps delivery</h3>
+              <p>Move from manual deployment to GitOps, where Git becomes the source of truth for application releases.</p>
+              <ul>
+                <li>ArgoCD installation, applications, repositories, sync policies, app health, desired state, and drift detection.</li>
+                <li>Helm with ArgoCD, auto sync, manual sync, rollback, multi-environment branches, and promotion workflows.</li>
+                <li>How to troubleshoot sync failures, unhealthy resources, repo access issues, and out-of-sync applications.</li>
+              </ul>
+              <p class="module-lab">Lab: deploy the Helm chart through ArgoCD and demonstrate Git-based rollback and promotion.</p>
             </article>
-            <article>
-              <h3>Terraform IaC</h3>
-              <p>Providers, variables, outputs, state, modules, workspaces, remote backends, planning, applying, and safe change review.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/terraform/7B42BC" alt="Terraform logo" loading="lazy" />
+                <span class="module-step">Module 08</span>
+              </div>
+              <h3>Terraform infrastructure as code</h3>
+              <p>Provision cloud infrastructure with reusable code, safe reviews, predictable state, and practical module design.</p>
+              <ul>
+                <li>Providers, resources, variables, outputs, locals, state, remote backends, workspaces, modules, and plan/apply flow.</li>
+                <li>AWS VPC, subnets, security groups, IAM basics, ECR, EKS dependencies, and environment-specific modules.</li>
+                <li>Real-world safeguards: state locking, drift review, import basics, plan review, and avoiding destructive changes.</li>
+              </ul>
+              <p class="module-lab">Lab: create Terraform modules for AWS network and deployment prerequisites used by the EKS project.</p>
             </article>
-            <article>
-              <h3>AWS and EKS</h3>
-              <p>IAM, VPC, EC2, ECR, Load Balancers, Route 53 basics, EKS clusters, node groups, kubectl access, and deployment on AWS.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy" />
+                <span class="module-step">Module 09</span>
+              </div>
+              <h3>AWS cloud services for DevOps</h3>
+              <p>Learn the AWS building blocks that DevOps engineers use while deploying, securing, and operating cloud workloads.</p>
+              <ul>
+                <li>IAM users, roles, policies, VPC, subnets, route tables, security groups, EC2, ECR, load balancers, and Route 53 basics.</li>
+                <li>Cloud deployment patterns, least-privilege access, image registry flow, networking dependencies, and cost-aware setup.</li>
+                <li>Common AWS interview scenarios around IAM access, VPC connectivity, ECR authentication, and load balancer issues.</li>
+              </ul>
+              <p class="module-lab">Lab: prepare AWS infrastructure and registry flow for a containerized application release.</p>
             </article>
-            <article>
-              <h3>Monitoring and logs</h3>
-              <p>Metrics, alerts, dashboards, logs, application health, Prometheus and Grafana concepts, and incident visibility.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy" />
+                <img class="module-logo" src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes logo" loading="lazy" />
+                <span class="module-step">Module 10</span>
+              </div>
+              <h3>AWS EKS production deployment</h3>
+              <p>Bring Kubernetes and AWS together by deploying workloads to EKS with real cloud networking and delivery practices.</p>
+              <ul>
+                <li>EKS cluster access, node groups, kubectl authentication, namespaces, ECR image pulls, service accounts, and load balancers.</li>
+                <li>AWS Load Balancer Controller concepts, ingress flow, DNS mapping, rollout validation, and production-style release checks.</li>
+                <li>Troubleshooting node readiness, IAM permissions, image pull errors, service exposure, and ingress target health.</li>
+              </ul>
+              <p class="module-lab">Lab: deploy the final application to EKS using Docker, Helm, ArgoCD, ECR, and AWS load balancing.</p>
             </article>
-            <article>
-              <h3>Troubleshooting labs</h3>
-              <p>ImagePullBackOff, CrashLoopBackOff, pending pods, failed probes, ingress issues, broken pipelines, IAM errors, and networking faults.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <img class="module-logo" src="https://cdn.simpleicons.org/prometheus/E6522C" alt="Prometheus logo" loading="lazy" />
+                <img class="module-logo" src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana logo" loading="lazy" />
+                <span class="module-step">Module 11</span>
+              </div>
+              <h3>Monitoring, logs, and alerts</h3>
+              <p>Understand observability basics so you can detect issues, read symptoms, and explain production health clearly.</p>
+              <ul>
+                <li>Metrics, logs, dashboards, alerts, service health, application latency, resource saturation, and failure symptoms.</li>
+                <li>Prometheus and Grafana concepts, Kubernetes metrics, pod logs, event review, and alert investigation workflow.</li>
+                <li>How to explain monitoring in interviews: what to watch, why it matters, and what action follows an alert.</li>
+              </ul>
+              <p class="module-lab">Lab: build dashboards for Kubernetes workloads and practice incident-style log and metric analysis.</p>
             </article>
-            <article>
-              <h3>Interview preparation</h3>
-              <p>Resume positioning, scenario questions, project explanation, mock interview practice, and common DevOps interview answers.</p>
+            <article class="module-card">
+              <div class="module-topline">
+                <span class="module-logo module-logo-text">404</span>
+                <span class="module-step">Module 12</span>
+              </div>
+              <h3>DevOps troubleshooting labs</h3>
+              <p>Practice realistic failures so you can debug faster in projects and answer scenario-based interview questions.</p>
+              <ul>
+                <li>ImagePullBackOff, CrashLoopBackOff, pending pods, failed probes, bad secrets, service mismatch, and DNS failures.</li>
+                <li>Broken Jenkins pipelines, failed Helm upgrades, ArgoCD sync errors, Terraform plan failures, and AWS IAM mistakes.</li>
+                <li>Structured debugging: symptom, scope, logs, events, config, recent change, fix, validation, and prevention.</li>
+              </ul>
+              <p class="module-lab">Lab: solve guided break/fix scenarios across Jenkins, Docker, Kubernetes, Helm, ArgoCD, AWS, and EKS.</p>
+            </article>
+            <article class="module-card">
+              <div class="module-topline">
+                <span class="module-logo module-logo-text">HR</span>
+                <span class="module-step">Module 13</span>
+              </div>
+              <h3>Resume and interview preparation</h3>
+              <p>Turn the course project into a confident interview story with architecture, decisions, failures, and measurable outcomes.</p>
+              <ul>
+                <li>Resume project framing, GitHub portfolio cleanup, architecture explanation, and DevOps responsibility mapping.</li>
+                <li>Mock interviews, scenario questions, command questions, cloud questions, troubleshooting questions, and HR preparation.</li>
+                <li>How to explain CI/CD, Kubernetes, EKS, Terraform, monitoring, and incidents without memorized answers.</li>
+              </ul>
+              <p class="module-lab">Lab: prepare a final project walkthrough, interview Q&A sheet, and resume-ready DevOps project summary.</p>
             </article>
           </div>
         </div>
