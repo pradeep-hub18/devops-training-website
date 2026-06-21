@@ -14,16 +14,18 @@ Static lead generation website for a DevOps training course covering Linux, Git,
 Update these placeholders before publishing:
 
 1. In `assets/app.js`
-   - `whatsappNumber`: replace `919999999999` with your WhatsApp number in international format without `+`.
-   - `appsScriptUrl`: paste your deployed Google Apps Script Web App URL.
+   - `whatsappNumber`: already configured as `919583598899`.
+   - `appsScriptUrl`: paste your deployed Google Apps Script Web App URL when Google Sheets lead storage is ready.
 2. In `assets/admin.js`
    - `appsScriptUrl`: paste the same Google Apps Script Web App URL.
 
 Example WhatsApp number format:
 
 ```js
-whatsappNumber: "919876543210"
+whatsappNumber: "919583598899"
 ```
+
+Until `appsScriptUrl` is configured, the student inquiry form opens WhatsApp with the submitted lead details so inquiries still reach you.
 
 ## Set Up Google Sheets Lead Storage
 
