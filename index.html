@@ -20,6 +20,8 @@
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="#syllabus">Syllabus</a>
+        <a href="#projects">Projects</a>
+        <a href="#aws-services">AWS Services</a>
         <a href="#outcomes">Outcomes</a>
         <a href="#interview">Interview Prep</a>
         <a href="#lead-form">Enroll</a>
@@ -31,6 +33,8 @@
 
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
       <a href="#syllabus">Syllabus</a>
+      <a href="#projects">Projects</a>
+      <a href="#aws-services">AWS Services</a>
       <a href="#outcomes">Outcomes</a>
       <a href="#interview">Interview Prep</a>
       <a href="#lead-form">Enroll</a>
@@ -138,6 +142,48 @@
             <li>Monitoring</li>
             <li>Troubleshooting</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section services-section" id="aws-services">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">AWS and DevOps services</p>
+            <h2>Learn the services used in real cloud DevOps work.</h2>
+            <p class="section-subcopy">Students do not just learn tool names. They learn where each service fits in a deployment, how teams use it, and how to explain it during interviews.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span>AWS foundation</span>
+              <h3>IAM, VPC, EC2, S3, Route 53</h3>
+              <p>Identity, networking, compute, storage, DNS, security groups, private/public subnets, and production-ready access basics.</p>
+            </article>
+            <article class="service-card">
+              <span>Container platform</span>
+              <h3>ECR, EKS, ALB/NLB, Ingress</h3>
+              <p>Container image registry, Kubernetes cluster deployment, AWS load balancing, ingress flow, and service exposure patterns.</p>
+            </article>
+            <article class="service-card">
+              <span>CI/CD services</span>
+              <h3>Jenkins, CodePipeline, CodeBuild, CodeDeploy</h3>
+              <p>Compare open-source and AWS-native release automation, build stages, deployment approvals, rollback planning, and release tracking.</p>
+            </article>
+            <article class="service-card">
+              <span>Infrastructure as Code</span>
+              <h3>Terraform, remote state, modules</h3>
+              <p>Reusable AWS infrastructure modules for VPC, ECR, EKS, IAM roles, node groups, and environment-specific deployments.</p>
+            </article>
+            <article class="service-card">
+              <span>Operations</span>
+              <h3>CloudWatch, CloudTrail, SNS, logs</h3>
+              <p>Metrics, logs, alarms, audit trails, alerting, incident visibility, pipeline monitoring, and troubleshooting workflows.</p>
+            </article>
+            <article class="service-card">
+              <span>Automation and security</span>
+              <h3>Ansible, Python, secrets, scanning</h3>
+              <p>Linux server automation, health reports, API checks, secrets hygiene, image scanning concepts, and repeatable support tasks.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -423,6 +469,73 @@
         </div>
       </section>
 
+      <section class="section projects-section" id="projects">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Real-time project portfolio</p>
+            <h2>Projects students can show in GitHub, resume, and interviews.</h2>
+            <p class="section-subcopy">These projects are designed to attract employers because they connect the full DevOps lifecycle: code, build, container, cloud infrastructure, GitOps deployment, monitoring, and troubleshooting.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card featured-project">
+              <span class="project-badge">Capstone</span>
+              <h3>End-to-end CI/CD to AWS EKS</h3>
+              <p>Build a complete delivery pipeline for a real application using GitHub, Jenkins, Docker, ECR, Helm, ArgoCD, Kubernetes, and AWS EKS.</p>
+              <ul>
+                <li>Jenkinsfile with build, test, image build, scan concept, push, and deploy stages.</li>
+                <li>Helm chart with dev/prod values, ConfigMaps, Secrets, probes, services, and ingress.</li>
+                <li>ArgoCD GitOps sync, rollback, deployment validation, and project explanation for interviews.</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <span class="project-badge">Cloud IaC</span>
+              <h3>Terraform AWS platform build</h3>
+              <p>Create reusable Terraform modules for VPC, subnets, IAM, ECR, EKS, node groups, and deployment prerequisites.</p>
+              <ul>
+                <li>Remote state, variables, outputs, modules, workspaces, and safe plan review.</li>
+                <li>Security groups, IAM roles, cluster access, and production-style naming standards.</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <span class="project-badge">GitOps</span>
+              <h3>Multi-environment release workflow</h3>
+              <p>Promote application releases from dev to staging to production using Git branches, Helm values, ArgoCD sync, and rollback.</p>
+              <ul>
+                <li>Understand desired state, drift detection, manual sync, auto sync, and change history.</li>
+                <li>Prepare a clear release story for real DevOps interviews.</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <span class="project-badge">SRE practice</span>
+              <h3>Monitoring and incident response lab</h3>
+              <p>Set up dashboards and debug practical failures like CrashLoopBackOff, ImagePullBackOff, failed probes, DNS issues, and ingress errors.</p>
+              <ul>
+                <li>Use Prometheus, Grafana, CloudWatch concepts, pod logs, events, and alert investigation.</li>
+                <li>Create an incident report with root cause, fix, validation, and prevention points.</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <span class="project-badge">Automation</span>
+              <h3>Linux support automation toolkit</h3>
+              <p>Create Ansible playbooks and Python scripts for day-to-day server operations and support engineer tasks.</p>
+              <ul>
+                <li>Automate package updates, service restarts, user creation, log cleanup, and health checks.</li>
+                <li>Generate daily server health reports and explain automation value in interviews.</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <span class="project-badge">Resume proof</span>
+              <h3>Final portfolio and interview walkthrough</h3>
+              <p>Package the work into a professional GitHub project with architecture notes, commands, screenshots, and resume-ready bullets.</p>
+              <ul>
+                <li>Architecture diagram, README, Jenkinsfile, Dockerfile, Helm chart, Terraform modules.</li>
+                <li>Mock interview questions, scenario answers, and project storytelling practice.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="interview">
         <div class="section-inner interview-panel">
           <div>
@@ -454,6 +567,10 @@
               <a class="button button-outline" href="https://www.instagram.com/cloudops_engineers/" target="_blank" rel="noopener">Follow on Instagram</a>
             </div>
             <p class="social-note">Follow <strong>@cloudops_engineers</strong> for demo clips, batch updates, DevOps tips, and project walkthroughs.</p>
+            <div class="course-link-card">
+              <span>Course page</span>
+              <a href="https://aimltutorial.in/devops-training/">https://aimltutorial.in/devops-training/</a>
+            </div>
           </div>
           <form class="lead-form" data-lead-form>
             <div class="form-row">
