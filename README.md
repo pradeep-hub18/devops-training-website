@@ -103,6 +103,27 @@ Your site will be available at:
 https://YOUR_GITHUB_USERNAME.github.io/devops-training-website/
 ```
 
+This site is configured for the custom domain:
+
+```text
+https://aimltutorial.in/
+```
+
+Point the apex domain to GitHub Pages with these `A` records:
+
+```text
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Point `www` to GitHub Pages with this `CNAME` record:
+
+```text
+www -> pradeep-hub18.github.io
+```
+
 ## Optional Improvements
 
 - Add your custom domain in GitHub Pages settings.
